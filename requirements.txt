@@ -4,7 +4,7 @@ imageio
 plotly
 opencv-python
 jupyter
-pillow
+pillow==8.4.0
 scikit-learn
-numpy
+numpy==1.24.4
 tqdm
