@@ -2,11 +2,10 @@
 [![arxiv](http://img.shields.io/badge/paper-arxiv.2210.09814-B31B1B.svg)][arxiv]
 [![project page](https://img.shields.io/badge/website-project%20page-informational.svg)][project page]
 
-# CNN Training and Image Selection
+Image Selection
 
 You can use this code for
 
-- [CNN Training](#CNN-Training): Using detectron2 to train a CNN on your own dataset
 - [Image Selection](#Pipeline-for-Image-Selection): Process and select images scraped from the internet to create your
   own dataset
 
@@ -30,23 +29,7 @@ our [project page][project page] for more detailed information. Quick overview:
     <br>
 </p>
 
-## CNN Training
 
-To run a training on our 5 [example images](data/parcel2d_demo/train) run:
-
-```shell
-python src/tools/train_maskrcnn.py --config-file ./src/maskrcnn/configs/maskrcnn.yaml --gpus "0" --num-gpus 1 --num-machines 1
-```
-
-- To add your own dataset, you need to register in the [register_datasets.py](src/maskrcnn/data/register_datasets.py).
-- To check your results qualitatively you can
-  use [detectron_qualitative_evaluation.ipynb](src/notebooks/detectron_qualitative_evaluation.ipynb)
-
-To compute the final performance adjust and run [eval_maskrcnn.py](src/tools/eval_maskrcnn.py)
-
-```shell
-python src/tools/eval_maskrcnn.py
-```
 
 ## Pipeline for Image Selection
 
